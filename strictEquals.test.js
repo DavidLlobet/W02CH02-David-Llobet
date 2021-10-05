@@ -31,7 +31,25 @@ describe("function strictEquals", function () {
 		//Assert
 		expect(result).toBe(expected)
 	});
+
+
+    test("when function strictEquals receives false and false, returns true", function() {
+
+		//Arrange
+		const a = false;
+		const b = false;
+		const expected = true;
+
+		//Act
+		const result = strictEquals(a, b);
+
+		//Assert
+		expect(result).toBe(expected)
+	});
 });
+
+});
+
 
 
 
