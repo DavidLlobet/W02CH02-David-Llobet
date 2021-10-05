@@ -102,6 +102,34 @@ describe("function strictEquals", function () {
 		//Assert
 		expect(result).toBe(expected)
 	});
+
+    test("when function strictEquals receives 0 and -0, it should return true", function() {
+
+		//Arrange
+		const a = 0;
+		const b = -0;
+		const expected = true;
+
+		//Act
+		const result = strictEquals(a, b);
+
+		//Assert
+		expect(result).toBe(expected)
+	});
+
+    test("when function strictEquals receives 0 and -0, it should return true", function() {
+
+		//Arrange
+		const a = -0;
+		const b = 0;
+		const expected = true;
+
+		//Act
+		const result = strictEquals(a, b);
+
+		//Assert
+		expect(result).toBe(expected)
+	});
 });
 
 
