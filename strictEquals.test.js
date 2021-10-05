@@ -32,6 +32,7 @@ describe("function strictEquals", function () {
 		expect(result).toBe(expected)
 	});
 
+
     test("when function strictEquals receives false and false, returns true", function() {
 
 		//Arrange
@@ -46,4 +47,9 @@ describe("function strictEquals", function () {
 		expect(result).toBe(expected)
 	});
 });
+
+});
+
+
+
 
