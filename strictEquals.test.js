@@ -18,7 +18,7 @@ function strictEquals(a, b) {
 
 describe("function strictEquals", function () {
 
-	test("when function strictEquals receives 1 and 1, returns true", function() {
+	test("when function strictEquals receives 1 and 1, it should return true", function() {
 
 		//Arrange
 		const a = 1;
@@ -33,7 +33,7 @@ describe("function strictEquals", function () {
 	});
 
 
-    test("when function strictEquals receives false and false, returns true", function() {
+    test("when function strictEquals receives false and false, it should return true", function() {
 
 		//Arrange
 		const a = false;
@@ -46,8 +46,62 @@ describe("function strictEquals", function () {
 		//Assert
 		expect(result).toBe(expected)
 	});
-});
 
+    test("when function strictEquals receives 1 and '1', it should return false", function() {
+
+		//Arrange
+		const a = 1;
+		const b = '1';
+		const expected = false;
+
+		//Act
+		const result = strictEquals(a, b);
+
+		//Assert
+		expect(result).toBe(expected)
+	});
+
+    test("when function strictEquals receives true and false, it should return false", function() {
+
+		//Arrange
+		const a = true;
+		const b = false;
+		const expected = false;
+
+		//Act
+		const result = strictEquals(a, b);
+
+		//Assert
+		expect(result).toBe(expected)
+	});
+
+    test("when function strictEquals receives 'Water' and 'oil', it should return false", function() {
+
+		//Arrange
+		const a = "Water";
+		const b = "oil";
+		const expected = false;
+
+		//Act
+		const result = strictEquals(a, b);
+
+		//Assert
+		expect(result).toBe(expected)
+	});
+
+    test("when function strictEquals receives NaN and NaN, it should return false", function() {
+
+		//Arrange
+		const a = NaN;
+		const b = NaN;
+		const expected = false;
+
+		//Act
+		const result = strictEquals(a, b);
+
+		//Assert
+		expect(result).toBe(expected)
+	});
 });
 
 
