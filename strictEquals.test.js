@@ -16,3 +16,20 @@ function strictEquals(a, b) {
     }    	
 }
 
+describe("function strictEquals", function () {
+
+	test("when function strictEquals receives 1 and 1, returns true", function() {
+
+		//Arrange
+		const a = 1;
+		const b = 1;
+		const expected = true;
+
+		//Act
+		const result = strictEquals(a, b);
+
+		//Assert
+		expect(result).toBe(expected)
+	});
+});
+
